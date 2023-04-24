@@ -12,7 +12,7 @@ Make sure you have the virtual environmwnt package installed:
 Setup your virtual environment:
 `python3 -m venv env && source env/bin/activate`
 
-3. Install dependencies
+3. Install dependencies:  
 `pip3 install Flask`  
 `pip3 install openai`  
 `pip3 install python_dotenv`  

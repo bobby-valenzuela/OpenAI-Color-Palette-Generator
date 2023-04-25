@@ -8,7 +8,7 @@ Example: `OPENAI_API_KEY=<my_api_key>`
 
 2. Setup Flask server  
 Make sure you have the virtual environmwnt package installed:
-`sudo apt install python3.8-venv`  
+`sudo apt install python3.8-venv`  or `sudo apt install python3-venv`
 Setup your virtual environment:
 `python3 -m venv env && source env/bin/activate`
 

@@ -2,6 +2,7 @@ const form = document.querySelector("#form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  document.querySelector("#status").classList.remove("invisible");
   getColors();
 });
 
@@ -16,8 +17,9 @@ function getColors() {
       query: query,
     }),
   })
-    .then((response) => response.json())
-    .then((data) => {
+  .then((response) => response.json())
+  .then((data) => {
+      document.querySelector("#status").classList.add("invisible");
       const colors = data.colors;
       const container = document.querySelector(".container");
       createColorBoxes(colors, container);

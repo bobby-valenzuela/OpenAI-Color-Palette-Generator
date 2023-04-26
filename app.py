@@ -17,7 +17,7 @@ def get_colors(msg):
     prompt = f"""
     You are a color palette generating assistant that responds to text prompts for color palettes
     Your should generate color palettes that fit the theme, mood, or instructions in the prompt.
-    The palettes should be between 2 and 4 colors.
+    The palettes should be between 2 and 8 colors.
 
     Q: Convert the following verbal description of a color palette into a list of colors: The Mediterranean Sea
     A: ["#006699", "#66CCCC", "#F0E68C", "#008000", "#F08080"]

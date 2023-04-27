@@ -13,7 +13,30 @@ app = Flask(__name__,
     static_folder='static'
 )
 
+
 def get_colors(msg):
+
+    messages = [
+        {"role":"system","content":"You are a color palette generating assistant that responds to text prompts for color palettes. You should generate color palettes that fit the theme, mood, or instructions in the prompt. The palettes should be between 2 and 8 colors."},
+        {"role":"user","content":"Convert the following verbal description of a color palette into a list of colors: The Mediterranean Sea"},
+        {"role":"assistant","content":'["#EDF1D6", "#9DC08B", "#609966", "#40513B"]'},
+        {"role":"user","content":"Convert the following verbal description of a color palette into a list of colors: sage, nature, earth"},
+        {"role":"assistant","content":'["#EDF1D6", "#9DC08B", "#609966", "#40513B"]'},
+        {"role":"user","content":f"Convert the following verbal description of a color palette into a list of colors: {msg}"},
+    ]
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=messages,
+        max_tokens=200,
+    )
+    # Our response will be a string representation of a python list. Using json.loads (basically like JSON.parse in JS) evaluates out string and converts to a Python data type. In this case, an actual list we can use.
+    colors = json.loads(response["choices"][0]["message"]["content"])
+    return colors
+
+
+# Same as get_colors but using the text-completion api (text-davinci-003)
+def get_colors_completionapi(msg):
     prompt = f"""
     You are a color palette generating assistant that responds to text prompts for color palettes
     Your should generate color palettes that fit the theme, mood, or instructions in the prompt.

@@ -10,7 +10,7 @@ Example: `OPENAI_API_KEY=<my_api_key>`
 Make sure you have the virtual environmwnt package installed:
 `sudo apt install python3.8-venv`  or `sudo apt install python3-venv`
 Setup your virtual environment:
-`python3 -m venv env` or `virtualenv env`
+`python3 -m venv env` or `virtualenv env` # Where 'env' is the name of your environment
 `source env/bin/activate`
 
 

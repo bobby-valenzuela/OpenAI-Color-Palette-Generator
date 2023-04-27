@@ -10,7 +10,9 @@ Example: `OPENAI_API_KEY=<my_api_key>`
 Make sure you have the virtual environmwnt package installed:
 `sudo apt install python3.8-venv`  or `sudo apt install python3-venv`
 Setup your virtual environment:
-`python3 -m venv env && source env/bin/activate`
+`python3 -m venv env` or `virtualenv env`
+`source env/bin/activate`
+
 
 3. Install dependencies:  
 `pip3 install Flask`  

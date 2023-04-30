@@ -13,3 +13,5 @@ Example: `OPENAI_API_KEY=<my_api_key>`
 `flask run`
 or (to live respond to code changes)...
 `flask run --debug`
+
+You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).

@@ -21,3 +21,7 @@ $ flask run --debug
 ```
 
 You should now be able to access the app at [http://localhost:5000](http://localhost:5000)! For the full context behind this example app, check out the [tutorial](https://beta.openai.com/docs/quickstart).
+  
+![Alt text](./demo-001.gif?raw=true "Demo 1")
+![Alt text](./demo-001.png?raw=true "Demo 2")
+![Alt text](./demo-002.png?raw=true "Demo 3")
